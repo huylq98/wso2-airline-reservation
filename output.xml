@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<soapenv:Envelope xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <customerName>John Smith</customerName>
+        <passportNumber>323232131</passportNumber>
+        <ticketDetails>
+            <ticketDetail>
+                <ticketId>1212</ticketId>
+                <airline>Bamboo Airways</airline>
+                <price>$400</price>
+            </ticketDetail>
+            <ticketDetail>
+                <ticketId>1213</ticketId>
+                <airline>VietNam Airlines</airline>
+                <price>$500</price>
+            </ticketDetail>
+        </ticketDetails>
+    </soapenv:Body>
+</soapenv:Envelope>

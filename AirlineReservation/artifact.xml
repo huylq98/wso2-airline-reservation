@@ -1,1 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?><artifacts/>
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="AirlineReservation" groupId="com.example.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/AirlineReservation.xml</file>
+    </artifact>
+    <artifact name="AirlineReservation_swagger" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/AirlineReservation_swagger.yaml</file>
+    </artifact>
+    <artifact name="AirlineReservation_metadata" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/AirlineReservation_metadata.yaml</file>
+    </artifact>
+    <artifact name="FILE_CONNECTION_1" groupId="com.example.local-entry" version="1.0.0" type="synapse/local-entry" serverRole="EnterpriseServiceBus">
+        <file>/src/main/synapse-config/local-entries/FILE_CONNECTION_1.xml</file>
+    </artifact>
+    <artifact name="LOCAL_FILE_CONNECTION" groupId="com.example.local-entry" version="1.0.0" type="synapse/local-entry" serverRole="EnterpriseServiceBus">
+        <file>/src/main/synapse-config/local-entries/LOCAL_FILE_CONNECTION.xml</file>
+    </artifact>
+</artifacts>

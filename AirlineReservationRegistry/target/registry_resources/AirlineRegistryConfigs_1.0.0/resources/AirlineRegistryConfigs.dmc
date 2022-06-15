@@ -1,0 +1,30 @@
+map_S_root_S_Envelope = function(){ 
+var outputsoapenv_Envelope={};
+
+var count_i_ticketDetails_ffdc3dfc_76aa_4625_a043_44f5c5245573 = 0;
+outputsoapenv_Envelope =  {};
+outputsoapenv_Envelope.soapenv_Body =  {};
+outputsoapenv_Envelope.soapenv_Body.customerName = inputroot.customerName;
+outputsoapenv_Envelope.soapenv_Body.ticketDetails =  {};
+outputsoapenv_Envelope.soapenv_Body.ticketDetails._ELEMVAL = inputroot.passportNumber;
+outputsoapenv_Envelope.soapenv_Body.ticketDetails.ticketDetail =  [];
+
+for(i_ticketDetails_ffdc3dfc_76aa_4625_a043_44f5c5245573 in inputroot.ticketDetails){
+outputsoapenv_Envelope.soapenv_Body.ticketDetails.ticketDetail[count_i_ticketDetails_ffdc3dfc_76aa_4625_a043_44f5c5245573] =  {};
+outputsoapenv_Envelope.soapenv_Body.ticketDetails.ticketDetail[count_i_ticketDetails_ffdc3dfc_76aa_4625_a043_44f5c5245573].ticketId = inputroot.ticketDetails[i_ticketDetails_ffdc3dfc_76aa_4625_a043_44f5c5245573].ticketId;
+outputsoapenv_Envelope.soapenv_Body.ticketDetails.ticketDetail[count_i_ticketDetails_ffdc3dfc_76aa_4625_a043_44f5c5245573].airline = inputroot.ticketDetails[i_ticketDetails_ffdc3dfc_76aa_4625_a043_44f5c5245573].airline;
+outputsoapenv_Envelope.soapenv_Body.ticketDetails.ticketDetail[count_i_ticketDetails_ffdc3dfc_76aa_4625_a043_44f5c5245573].price = inputroot.ticketDetails[i_ticketDetails_ffdc3dfc_76aa_4625_a043_44f5c5245573].price;
+
+count_i_ticketDetails_ffdc3dfc_76aa_4625_a043_44f5c5245573++;
+}
+return outputsoapenv_Envelope;
+};
+
+
+
+
+
+
+
+
+

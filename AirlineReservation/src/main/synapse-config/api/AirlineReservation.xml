@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/reservation" name="AirlineReservation" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="POST">
+        <inSequence>
+            <log>
+                <property name="Airline Reservattion" value="New Reservation Triggered"/>
+            </log>
+            <clone>
+                <target>
+                    <sequence>
+                        <datamapper config="gov:datamapper/AirlineRegistryConfigs.dmc" inputSchema="gov:datamapper/AirlineRegistryConfigs_inputSchema.json" inputType="JSON" outputSchema="gov:datamapper/AirlineRegistryConfigs_outputSchema.json" outputType="XML" xsltStyleSheet="gov:datamapper/AirlineRegistryConfigs_xsltStyleSheet.xml"/>
+                        <propertyGroup>
+                            <property name="messageType" scope="axis2" type="STRING" value="application/soap+xml"/>
+                            <property name="ContentType" scope="axis2" type="STRING" value="application/soap+xml"/>
+                        </propertyGroup>
+                        <respond/>
+                    </sequence>
+                </target>
+                <target>
+                    <sequence>
+                        <propertyGroup>
+                            <property expression="$body" name="payload" scope="default" type="STRING"/>
+                            <property expression="fn:concat('/Users/huylq33/IntegrationStudio/8.1.0/workspace/AirlineReservationProject/reservation-', get-property(&quot;SYSTEM_DATE&quot;, &quot;yyyy-MM-dd'T'HH:mm:ss.SSSXXX&quot;))" name="sourceURL" scope="default" type="STRING"/>
+                        </propertyGroup>
+                        <file.write configKey="LOCAL_FILE_CONNECTION">
+                            <filePath>{$ctx:sourceURL}</filePath>
+                            <contentOrExpression>{$ctx:payload}</contentOrExpression>
+                            <mimeType>Automatic</mimeType>
+                            <compress>false</compress>
+                            <writeMode>Overwrite</writeMode>
+                            <enableStreaming>false</enableStreaming>
+                            <appendNewLine>false</appendNewLine>
+                            <enableLock>false</enableLock>
+                            <includeResultTo>Message Body</includeResultTo>
+                            <updateLastModified>true</updateLastModified>
+                        </file.write>
+                        <drop/>
+                    </sequence>
+                </target>
+            </clone>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>

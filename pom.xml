@@ -9,6 +9,8 @@
   <name>AirlineReservationProject</name>
   <description>AirlineReservationProject</description>
   <modules>
+    <module>AirlineReservationRegistry</module>
+    <module>AirlineReservationConnectors</module>
     <module>AirlineReservation</module>
   </modules>
   <scm>

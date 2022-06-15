@@ -1,0 +1,16 @@
+{
+    "customerName": "John Smith",
+    "passportNumber": 323232131,
+    "ticketDetails": [
+        {
+            "ticketId": 1212,
+            "airline": "Bamboo Airways",
+            "price": "$400"
+        },
+        {
+            "ticketId": 1213,
+            "airline": "VietNam Airlines",
+            "price": "$500"
+        }
+    ]
+}
