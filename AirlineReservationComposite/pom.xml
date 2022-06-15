@@ -19,7 +19,6 @@
     <com.example.lib_._file-connector>capp/EnterpriseServiceBus</com.example.lib_._file-connector>
     <com.example.resource_._AirlineRegistryConfigs_inputSchema>capp/EnterpriseServiceBus</com.example.resource_._AirlineRegistryConfigs_inputSchema>
     <com.example.resource_._AirlineRegistryConfigs_outputSchema>capp/EnterpriseServiceBus</com.example.resource_._AirlineRegistryConfigs_outputSchema>
-    <com.example.local-entry_._FILE_CONNECTION_1>capp/EnterpriseServiceBus</com.example.local-entry_._FILE_CONNECTION_1>
     <com.example.api_._AirlineReservation>capp/EnterpriseServiceBus</com.example.api_._AirlineReservation>
     <com.example.metadata_._AirlineReservation_swagger>capp/EnterpriseServiceBus</com.example.metadata_._AirlineReservation_swagger>
     <com.example.metadata_._AirlineReservation_metadata>capp/EnterpriseServiceBus</com.example.metadata_._AirlineReservation_metadata>
@@ -56,12 +55,6 @@
       <artifactId>AirlineRegistryConfigs_outputSchema</artifactId>
       <version>1.0.0</version>
       <type>zip</type>
-    </dependency>
-    <dependency>
-      <groupId>com.example.local-entry</groupId>
-      <artifactId>FILE_CONNECTION_1</artifactId>
-      <version>1.0.0</version>
-      <type>xml</type>
     </dependency>
     <dependency>
       <groupId>com.example.api</groupId>
