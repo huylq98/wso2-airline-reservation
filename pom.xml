@@ -12,6 +12,7 @@
     <module>AirlineReservationRegistry</module>
     <module>AirlineReservationConnectors</module>
     <module>AirlineReservation</module>
+    <module>AirlineReservationComposite</module>
   </modules>
   <scm>
     <connection>scm:git:https://github.com/username/repository.git</connection>
@@ -63,12 +64,18 @@
     <profile>
       <id>Kubernetes</id>
       <build />
+      <modules>
+        <module>AirlineReservationK8S</module>
+      </modules>
     </profile>
     <profile>
       <activation>
         <activeByDefault>true</activeByDefault>
       </activation>
       <build />
+      <modules>
+        <module>AirlineReservationK8S</module>
+      </modules>
     </profile>
   </profiles>
 </project>
